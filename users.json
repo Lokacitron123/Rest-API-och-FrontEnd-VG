@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "firstname": "Lars-Gunnarsson",
+    "lastname": "Björndödarn",
+    "occupation": "Saxon cunt",
+    "age": 99
+  },
+  {
+    "id": 7,
+    "firstname": "Torhild",
+    "lastname": "Båtbyggarn",
+    "occupation": "Saxon cunt",
+    "age": 55
+  },
+  {
+    "id": 10,
+    "firstname": "Ragnhild",
+    "lastname": "Torsdottir",
+    "occupation": "Icelandic Viking",
+    "age": 23
+  },
+  {
+    "id": 242,
+    "firstname": "Therese",
+    "lastname": "Torsdottir",
+    "occupation": "Icelandic Viking",
+    "age": 23
+  },
+  {
+    "id": "5252",
+    "firstname": "Arthan",
+    "lastname": "Grindstone",
+    "occupation": "Icelandic Viking",
+    "age": 23
+  }
+]
