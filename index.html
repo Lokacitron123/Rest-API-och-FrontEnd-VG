@@ -11,7 +11,7 @@
 <body>
     
     <main>
-        <section>
+        <section id="sectionOne">
             <h1>Här en lista med alla användare ur min array</h1>
         <div id="showresults">
             <ul id="userlist">
@@ -19,19 +19,46 @@
             </ul>
         </div>
         </section>
-        <section>
-            <div id="formdiv">
-                <form action="GET">
-                    <input type="text" name="id">
-                    <button id="sendInfo">Skicka</button>
-                </form>
-            </div>
-            <h1>Här är en användare hämtad med ett specifikt ID</h1>
-            <div>
-                <ul id="specificuser">
+        <section id="sectionTwo">
+            <form id="postForm" onsubmit="postsubmit(event)">
+                <h1>Skapa En ny användare</h1>
+                <input type="text" name="firstname" placeholder="Your firstname">
+                
+                <input type="text" name="lastname" placeholder="Your lastname">
+                
+                <input type="text" name="occupation" placeholder="Your occupation">
+                
+                <input type="text" name="age" placeholder="Your age">
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="sectionThree">
+            <form id="putForm" onsubmit="postsubmit(event)">
+                <h1>Byt namn på en användare åvan</h1>
+                <input type="text" name="firstname" placeholder="the firstname of the user you want to change">
+                
+                <input type="text" name="lastname" placeholder="The lastname of the user you want to change ">
+                
+                <input type="text" name="newfirstname" placeholder="Write the new firstname you want">
 
-                </ul>
-            </div>
+                <input type="text" name="newlastname" placeholder="Write the new lastname you want">
+                
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="sectionFour">
+            <form id="deleteForm" onsubmit="postsubmit(event)">
+                <h1>Skriv in namnen på den användare du vill ta bort</h1>
+                <input type="text" name="firstname" placeholder="Firstname of the user you want to delete">
+                
+                <!-- <input type="text" name="lastname" placeholder="The lastname of the user you want to delete"> -->
+                
+                
+                
+                <button type="submit">Submit</button>
+            </form>
         </section>
     </main>
     

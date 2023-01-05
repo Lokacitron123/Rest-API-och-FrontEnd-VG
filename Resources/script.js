@@ -1,3 +1,5 @@
+
+// Nedan hämtar jag data för att logga ut alla användare från min JSON-server
 const userListUl = document.querySelector('#userlist ');
 const specificUser = document.querySelector('#specificuser');
 
@@ -21,67 +23,56 @@ const myFetchFunction = async () => {
 myFetchFunction()
 
 
-// fetch('http://localhost:3000/api/users')
-// .then((data) => {
-//     return data.json();
-// })
-// .then((objectdata) => {
-//     console.log(objectdata);
-//     let ulItems ="";
-//     objectdata.map((users) =>{
-//         ulItems += `<li>${users.firstname}</li>`;
-//     });
-//     document.querySelector("#userlist").innerHTML=ulItems;
-// })
+
+// -------- Nedan skickar jag in data för att skapa en ny användare ------ //
+
+const postForm = document.querySelector('#postForm');
+
+function postsubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(postForm);
+
+    const res = Object.fromEntries(formData);
+    const payload = JSON.stringify(res);
+    
 
 
+   
 
-
-
-
-// --------------- Nedanför hämtar jag hem ett specifikt ID och lägger -------------------- //
-
-// const myFetchIDFunction = async () => {
-//     const response = await fetch('http://localhost:3000/api/users/10');
-//     const data = await response.json();
-
-//     console.log(data);
+    fetch('http://localhost:3000/api/formpost', {
+        method: "POST",
+        body: payload,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
 
     
-//          let li = document.createElement('li');
-//          li.innerHTML = "Den här användaren heter " + user.firstname + " " + user.lastname + ". Hen jobbar som " + user.occupation + " och hens ID är: " + user.id;
-//          specificuser.append(li);
-        
-
-
-
-// fetch('http://localhost:3000/api/users/242')
-// .then((data) => {
-//     return data.json();
-// })
-// .then((data) => {
-//     console.log(data);
-
-//         let li = document.createElement('li');
-//          li.innerHTML = "Den här användaren heter " + data.firstname + " " + data.lastname + ". Hen jobbar som " + data.occupation + " och hens ID är: " + data.id;
-//          specificUser.append(li);
-         
-// })
-
-let formBtnEl = document.querySelector('#sendInfo');
-formBtnEl.addEventListener("click", obtainBackendInfo);
-
-function obtainBackendInfo() {
-    fetch('http://localhost:3000/api/saveformid')
-    .then((data) => {
-        return data.json();
-    })
-    .then((data) => {
-            console.log(data);
-
-        // let li = document.createElement('li');
-        //  li.innerHTML = "Den här användaren heter " + data.firstname + " " + data.lastname + ". Hen jobbar som " + data.occupation + " och hens ID är: " + data.id;
-        //  specificUser.append(li);
-    })
 }
 
+
+// Här gör jag en PUT request för att ändra namn på en användare
+
+const deleteForm = document.querySelector('#deleteForm');
+
+function postsubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(deleteForm);
+
+    const res = Object.fromEntries(formData);
+    const payload = JSON.stringify(res);
+    
+
+
+    fetch('http://localhost:3000/api/users/deleteuser', {
+        method: "DELETE",
+        body: payload,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    
+}

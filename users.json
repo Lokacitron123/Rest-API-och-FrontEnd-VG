@@ -8,8 +8,8 @@
   },
   {
     "id": 7,
-    "firstname": "Torhild",
-    "lastname": "Båtbyggarn",
+    "firstname": "Klas",
+    "lastname": "Larsson",
     "occupation": "Saxon cunt",
     "age": 55
   },
@@ -33,5 +33,33 @@
     "lastname": "Grindstone",
     "occupation": "Icelandic Viking",
     "age": 23
+  },
+  {
+    "firstname": "Johan",
+    "lastname": "Lindell",
+    "occupation": "Student",
+    "age": "31",
+    "id": "712"
+  },
+  {
+    "firstname": "Lars",
+    "lastname": "Knutsson",
+    "occupation": "Karate Sensei",
+    "age": "55",
+    "id": "7674"
+  },
+  {
+    "firstname": "Lassemajja",
+    "lastname": "Albinsson",
+    "occupation": "Cyklist",
+    "age": "13",
+    "id": "7498"
+  },
+  {
+    "firstname": "dsa",
+    "lastname": "sada",
+    "occupation": "sada",
+    "age": "dasa",
+    "id": "5447"
   }
 ]
