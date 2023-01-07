@@ -34,29 +34,30 @@
             </form>
         </section>
         <section id="sectionThree">
-            <form id="putForm" onsubmit="postsubmit(event)">
+            <form id="putForm" onsubmit="putsubmit(event)">
                 <h1>Byt namn på en användare åvan</h1>
                 <input type="text" name="firstname" placeholder="the firstname of the user you want to change">
                 
-                <input type="text" name="lastname" placeholder="The lastname of the user you want to change ">
+                <input type="text" name="lastname" placeholder="The lastname of the user you want to change">
                 
                 <input type="text" name="newfirstname" placeholder="Write the new firstname you want">
 
                 <input type="text" name="newlastname" placeholder="Write the new lastname you want">
                 
-                
                 <button type="submit">Submit</button>
             </form>
         </section>
         <section id="sectionFour">
-            <form id="deleteForm" onsubmit="postsubmit(event)">
-                <h1>Skriv in namnen på den användare du vill ta bort</h1>
-                <input type="text" name="firstname" placeholder="Firstname of the user you want to delete">
-                
-                <!-- <input type="text" name="lastname" placeholder="The lastname of the user you want to delete"> -->
-                
-                
-                
+            <form id="deleteForm" onsubmit="deletesubmit(event)">
+                <h1>Skriv in namnet på den användare du vill ta bort</h1>
+                <input type="text" name="firstname" placeholder="Firstname of the user you want to delete">           
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="sectionFive">
+            <form id="getSpecificUserForm" onsubmit="specificgetsubmit(event)">
+                <h1>Skriv in ID på den användare du vill få fram</h1>
+                <input type="text" name="id" placeholder="Type the id of the user you want to display to the right...">           
                 <button type="submit">Submit</button>
             </form>
         </section>

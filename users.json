@@ -35,13 +35,6 @@
     "age": 23
   },
   {
-    "firstname": "Johan",
-    "lastname": "Lindell",
-    "occupation": "Student",
-    "age": "31",
-    "id": "712"
-  },
-  {
     "firstname": "Lars",
     "lastname": "Knutsson",
     "occupation": "Karate Sensei",
@@ -61,5 +54,33 @@
     "occupation": "sada",
     "age": "dasa",
     "id": "5447"
+  },
+  {
+    "firstname": "Sara",
+    "lastname": "Icewind",
+    "occupation": "Icecream maker",
+    "age": "21",
+    "id": "4470"
+  },
+  {
+    "firstname": "sad",
+    "lastname": "asda",
+    "occupation": "Gamer",
+    "age": "17",
+    "id": "8034"
+  },
+  {
+    "firstname": "Martin",
+    "lastname": "Bajskorv",
+    "occupation": "Programmerare",
+    "age": "34",
+    "id": "6608"
+  },
+  {
+    "firstname": "Thorsten",
+    "lastname": "Lingvald",
+    "occupation": "Viking",
+    "age": "55",
+    "id": "9695"
   }
 ]

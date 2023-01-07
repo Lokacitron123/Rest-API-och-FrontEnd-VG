@@ -12,7 +12,7 @@ const myFetchFunction = async () => {
 
    for (user of theResponseData) {
     let li = document.createElement('li');
-    li.innerHTML = user.firstname + " " + user.lastname;
+    li.innerHTML = user.firstname + " " + user.lastname + ". Här är användarens Id: " + user.id;
     userListUl.append(li);
     console.log(user.firstname);
    }
@@ -47,32 +47,107 @@ function postsubmit(event) {
             'Content-Type': 'application/json'
         }
     })
-
+        .then(res => res.json())
+        .then(res => console.log(res))
+        .catch(res => console.log(res))
     
 }
 
 
 // Här gör jag en PUT request för att ändra namn på en användare
 
-const deleteForm = document.querySelector('#deleteForm');
+const putForm = document.querySelector('#putForm');
 
-function postsubmit(event) {
+function putsubmit(event) {
     event.preventDefault();
     
-    const formData = new FormData(deleteForm);
+    const formData = new FormData(putForm);
 
     const res = Object.fromEntries(formData);
     const payload = JSON.stringify(res);
     
 
 
-    fetch('http://localhost:3000/api/users/deleteuser', {
+    fetch('http://localhost:3000/api/change', {
+        method: "PUT",
+        body: payload,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(res => res.json())
+        .then(res => console.log(res))
+        .catch(res => console.log(res))
+    
+}
+
+
+// Här nedan skickar jag ett Delete anrop för att ta bort en användare
+
+const deleteForm = document.querySelector('#deleteForm');
+
+function deletesubmit(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(deleteForm);
+
+    
+    const res = Object.fromEntries(formData);
+    const payload = JSON.stringify(res);
+    
+
+
+    fetch('http://localhost:3000/api/delete', {
         method: "DELETE",
         body: payload,
         headers: {
             'Content-Type': 'application/json'
         }
     })
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(res => console.log(res))
+    
+}
+
+// Här nedan förfrågar jag efter en specifik användare utifrån ID : Vilka IDs mina användare har hittar du i users.json : Kolla där efter det nummer du vill logga fram
+
+const getSpecificUserForm = document.querySelector('#getSpecificUserForm');
+
+function specificgetsubmit(event) {
+    event.preventDefault();
+
+  
+   
+  
+   const formData = new FormData(getSpecificUserForm);
+   const res = Object.fromEntries(formData);
+   const id = res.id;
+
+
+
+  
+   
+
+    fetch('http://localhost:3000/api/' + id)
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(res => console.log(res));
+    
+}
+
+
+
+function getByID () {
+
+   const  param = {
+    param1: value1
+   };
+
 
     
 }
+
+
+
+specificgetsubmit();
