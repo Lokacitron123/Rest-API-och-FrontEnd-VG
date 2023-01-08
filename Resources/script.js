@@ -115,7 +115,7 @@ function deletesubmit(event) {
 const getSpecificUserForm = document.querySelector('#getSpecificUserForm');
 
 function specificgetsubmit(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
   
    
@@ -138,16 +138,6 @@ function specificgetsubmit(event) {
 
 
 
-function getByID () {
-
-   const  param = {
-    param1: value1
-   };
 
 
-    
-}
-
-
-
-specificgetsubmit();
+// specificgetsubmit();
